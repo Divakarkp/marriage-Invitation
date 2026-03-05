@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ENVELOPE SCREEN -->
+<div id="envelopeScreen">
+
+  <!-- CLICK CATCHER -->
+  <div id="clickLayer"></div>
+
+  <div class="envelope">
+    <div class="flap back"></div>
+    <div class="flap left"></div>
+    <div class="flap right"></div>
+    <div class="flap top"></div>
+
+    <div class="seal">
+      D &amp; M
+    </div>
+  </div>
+
+  <p class="envelope-hint">Tap to Open</p>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<main id="content">
+  <div class="pages pages--normal" aria-label="Invitation pages">
+
+        <!-- TAB 0: WEDDING OF LOVE HEADING -->
+        <section class="page page--title" aria-label="Wedding of Love">
+          <div class="page__content page__content--center">
+            <h2 class="page__wedding-title">The Wedding of Love</h2>
+            <div class="page__swipe">Scroll</div>
+          </div>
+        </section>
+
+        <!-- HERO VIDEO BANNER -->
+        <section class="page page--hero" aria-label="Hero video banner">
+          <video class="page__video" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/hero.mp4" type="video/mp4">
+          </video>
+          <div class="page__videoOverlay" aria-hidden="true"></div>
+          <div class="page__content page__content--bottom">
+            <p class="page__kicker page__kicker--light">Together With Our Families, We Invite You</p>
+            <h1 class="page__names page__names--light">Divakar KP <span class="amp amp--light">&amp;</span> Mamatha R</h1>
+          </div>
+        </section>
+
+        <!-- TAB 1: INVITED -->
+        <section class="page page--roses" aria-label="Invitation">
+          <div class="page__content page__content--center">
+            <p class="page__kicker">YOU’RE CORDIALLY INVITED</p>
+            <p class="page__invitation-text">With hearts full of love 💕<br>and blessings from our families 🙏,<br>we joyfully invite you to celebrate<br>the beautiful union of</p>
+            <h1 class="page__names">Divakar KP <span class="amp">&amp;</span> Mamatha R</h1>
+            <p class="page__invitation-text">as they begin a lifetime of love, laughter,<br>togetherness, and endless memories.</p>
+            <div class="page__swipe">Scroll</div>
+          </div>
+        </section>
+
+        <!-- TAB 2: COUPLE PHOTO -->
+        <section class="page page--photo" aria-label="Couple photo">
+          <div class="page__photo" style="background-image:url('images/couple.png');" role="img" aria-label="Couple photo"></div>
+          <div class="page__overlay">
+            <p class="page__kicker">TOGETHER WITH THEIR FAMILIES</p>
+            <h2 class="page__names page__names--small">Divakar KP <span class="amp">&amp;</span> Mamatha R</h2>
+          </div>
+        </section>
+
+        <!-- TAB 3: WEDDING DETAILS (like your image) -->
+        <section class="page page--details" aria-label="Wedding details">
+          <div class="details-bg" aria-hidden="true"></div>
+          <div class="page__content page__content--center">
+            <p class="page__kicker">INVITE YOU TO CELEBRATE THEIR</p>
+            <h2 class="script">Wedding</h2>
+            <div class="detail-lines">
+              <div class="detail-line">
+                <span class="detail-line__label">RECEPTION</span>
+                <span class="detail-line__value">22 APRIL • 6:30 PM</span>
+              </div>
+              <div class="detail-line">
+                <span class="detail-line__label">MUHURTHAM</span>
+                <span class="detail-line__value">23 APRIL • 8:30 AM</span>
+              </div>
+              <div class="detail-line">
+                <span class="detail-line__label">BEEGARA OOTA</span>
+                <span class="detail-line__value">26 APRIL • 12:00 PM ONWARDS</span>
+              </div>
+            </div>
+            <p class="page__muted">Madanayakanahalli, Bengaluru</p>
+          </div>
+        </section>
+
+        <!-- TAB 4: COUNTDOWN -->
+        <section class="page page--countdown" aria-label="Countdown">
+          <div class="page__content page__content--center">
+            <p class="page__kicker">COUNTDOWN</p>
+            <h2 class="page__title">Until the Muhurtham</h2>
+            <div class="timer timer--compact" role="timer" aria-live="polite">
+              <div class="tbox">
+                <div class="tval" id="cdDays">00</div>
+                <div class="tlabel">DAYS</div>
+              </div>
+              <div class="tbox">
+                <div class="tval" id="cdHours">00</div>
+                <div class="tlabel">HOURS</div>
+              </div>
+              <div class="tbox">
+                <div class="tval" id="cdMins">00</div>
+                <div class="tlabel">MIN</div>
+              </div>
+              <div class="tbox">
+                <div class="tval" id="cdSecs">00</div>
+                <div class="tlabel">SEC</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+  <!-- TAB 5: GALLERY -->
+  <section class="page page--gallery" aria-label="Gallery">
+    <div class="page__content page__content--center">
+      <p class="page__kicker">GALLERY</p>
+      <h2 class="page__title">Our Moments</h2>
+
+      <div class="gallery__grid" aria-label="Photo gallery">
+        <button class="gallery__item" type="button" data-full="images/gallery1.jpg" aria-label="Open photo 1">
+          <img src="images/gallery1.jpg" alt="Gallery photo 1" loading="lazy">
+        </button>
+        <button class="gallery__item" type="button" data-full="images/gallery2.jpg" aria-label="Open photo 2">
+          <img src="images/gallery2.jpg" alt="Gallery photo 2" loading="lazy">
+        </button>
+        <button class="gallery__item" type="button" data-full="images/gallery3.jpg" aria-label="Open photo 3">
+          <img src="images/gallery3.jpg" alt="Gallery photo 3" loading="lazy">
+        </button>
+        <button class="gallery__item" type="button" data-full="images/gallery4.jpg" aria-label="Open photo 4">
+          <img src="images/gallery4.jpg" alt="Gallery photo 4" loading="lazy">
+        </button>
+        <button class="gallery__item" type="button" data-full="images/gallery5.jpg" aria-label="Open photo 5">
+          <img src="images/gallery5.jpg" alt="Gallery photo 5" loading="lazy">
+        </button>
+        <button class="gallery__item" type="button" data-full="images/gallery6.jpg" aria-label="Open photo 6">
+          <img src="images/gallery6.jpg" alt="Gallery photo 6" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 6: LOCATION / MAP -->
+  <section class="page page--map" aria-label="Location map">
+    <div class="page__content page__content--center">
+      <p class="page__kicker">LOCATION</p>
+      <h2 class="page__title">BGS Samudhaya Bhavana</h2>
+      <p class="page__muted">Convention Hall • Bengaluru</p>
+
+      <div class="map-card" role="group" aria-label="Convention hall map and details">
+        <div class="map-card__art" aria-hidden="true">
+          <svg class="pin-art" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 60c10-14 18-24 18-34a18 18 0 1 0-36 0c0 10 8 20 18 34Z" stroke="rgba(180,137,45,0.95)" stroke-width="2.5"/>
+            <path d="M32 35a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="rgba(180,137,45,0.55)" stroke-width="2.5"/>
+            <path d="M16 10c6-5 12-7 16-7s10 2 16 7" stroke="rgba(180,137,45,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="map-card__frame">
+          <iframe
+            title="BGS Samudhaya Bhavana - Google Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=BGS%20Samudhaya%20Bhavana&output=embed">
+          </iframe>
+        </div>
+
+        <div class="map-card__details">
+          <div class="map-card__line"><span class="map-card__label">Venue</span><span class="map-card__value">BGS Samudhaya Bhavana</span></div>
+          <div class="map-card__line"><span class="map-card__label">Type</span><span class="map-card__value">Convention Hall</span></div>
+          <div class="map-card__actions">
+            <a class="map-btn" href="https://share.google/aLKXlYxe9l3WqMtfl" target="_blank" rel="noopener">Open shared map</a>
+            <a class="map-btn map-btn--ghost" href="https://www.google.com/maps/search/?api=1&query=BGS%20Samudhaya%20Bhavana" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 7: BEEGARA OOTA LOCATION / MAP -->
+  <section class="page page--map" aria-label="Beegara Oota location map">
+    <div class="page__content page__content--center">
+      <p class="page__kicker">LOCATION</p>
+      <h2 class="page__title">Beegara Oota</h2>
+      <p class="page__muted">26 April • 12:00 PM Onwards</p>
+
+      <div class="map-card" role="group" aria-label="Beegara Oota map and details">
+        <div class="map-card__art" aria-hidden="true">
+          <svg class="pin-art" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 60c10-14 18-24 18-34a18 18 0 1 0-36 0c0 10 8 20 18 34Z" stroke="rgba(180,137,45,0.95)" stroke-width="2.5"/>
+            <path d="M32 35a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="rgba(180,137,45,0.55)" stroke-width="2.5"/>
+            <path d="M16 10c6-5 12-7 16-7s10 2 16 7" stroke="rgba(180,137,45,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="map-card__frame">
+          <iframe
+            title="Beegara Oota - Google Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            src="https://www.google.com/maps?q=https://maps.app.goo.gl/12kx2y1XqCY7z9yT9&output=embed">
+          </iframe>
+        </div>
+
+        <div class="map-card__details">
+          <div class="map-card__line"><span class="map-card__label">Event</span><span class="map-card__value">Beegara Oota</span></div>
+          <div class="map-card__line"><span class="map-card__label">Date & Time</span><span class="map-card__value">26 April • 12:00 PM Onwards</span></div>
+          <div class="map-card__actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/12kx2y1XqCY7z9yT9" target="_blank" rel="noopener noreferrer">Open shared map</a>
+            <a class="map-btn map-btn--ghost" href="https://maps.app.goo.gl/12kx2y1XqCY7z9yT9" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+  <img class="lightbox__img" id="lightboxImg" alt="">
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Next photo">›</button>
+</div>
+
+<script src="jss/main.js"></script>
+</body>
+</html>
