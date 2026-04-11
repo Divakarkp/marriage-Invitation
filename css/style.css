@@ -720,10 +720,43 @@ body {
 
 /* Countdown inside phone */
 .page--countdown{
+  height: clamp(300px, 48vh, 440px);
+  min-height: 300px;
   background:
     linear-gradient(135deg, rgba(255,240,246,0.85) 0%, rgba(255,247,230,0.85) 55%, rgba(255,240,246,0.85) 100%);
   background-size: cover;
   background-position: center;
+}
+.page--countdown .page__content{
+  padding: 18px 16px;
+}
+.page--countdown .page__kicker{
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.page--countdown .page__title{
+  font-size: clamp(18px, 3.8vw, 24px);
+  margin: 6px 0 12px;
+}
+.page--countdown .timer--compact{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: min(320px, 88vw);
+  margin: 0 auto;
+}
+.page--countdown .timer--compact .tbox{
+  min-width: 0;
+  padding: 10px 6px;
+  border-radius: 14px;
+}
+.page--countdown .timer--compact .tval{
+  font-size: clamp(18px, 4.5vw, 26px);
+}
+.page--countdown .timer--compact .tlabel{
+  margin-top: 5px;
+  font-size: 8px;
+  letter-spacing: 0.16em;
 }
 .timer--compact{
   display:grid;
