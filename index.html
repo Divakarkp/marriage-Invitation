@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="images/couple.webp" type="image/webp">
 </head>
 <body>
 
@@ -97,7 +98,7 @@
         <!-- TAB 2: COUPLE PHOTO -->
         <section class="page page--photo" aria-label="Couple photo">
           <div class="page__photo" role="img" aria-label="Couple photo">
-            <img class="page__photoImg" src="images/couple.webp" alt="" width="1200" height="1600" loading="lazy" decoding="async" fetchpriority="low">
+            <img class="page__photoImg" src="images/couple.webp" alt="" width="1200" height="1600" loading="eager" decoding="async" fetchpriority="high">
           </div>
           <div class="page__overlay">
             <p class="page__kicker">TOGETHER WITH THEIR FAMILIES</p>
@@ -262,6 +263,10 @@
   </section>
 
   </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <p class="site-footer__text">Developed by <span class="site-footer__name">Divakar KP</span></p>
+  </footer>
 </main>
 
 <!-- LIGHTBOX -->

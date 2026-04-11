@@ -6,6 +6,20 @@ const HERO_YOUTUBE_VIDEO_ID = "1mVoid9lyH8";
 
 let heroYoutubeInitStarted = false;
 let youtubeIframeApiPromise = null;
+let invitationImagesWarmStarted = false;
+
+function warmInvitationImages() {
+  if (invitationImagesWarmStarted) return;
+  invitationImagesWarmStarted = true;
+  const paths = [
+    "images/couple.webp",
+    ...[1, 2, 3, 4, 5, 6].map((n) => `images/gallery${n}.webp`),
+  ];
+  paths.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}
 
 function ensureYoutubeIframeAPI() {
   if (window.YT && window.YT.Player) return Promise.resolve();
@@ -123,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         content.classList.add("show");
         document.body.style.overflow = "auto";
 
+        warmInvitationImages();
         loadHeroYoutube(true);
       }, 300);
     }, 800);

@@ -343,10 +343,6 @@ body {
 .pages--normal{
   overflow: visible;
 }
-.pages--normal > .page{
-  content-visibility: auto;
-  contain-intrinsic-size: auto 100vh;
-}
 .page{
   height: 100vh;
   position:relative;
@@ -753,7 +749,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  contain: layout style;
 }
 
 .gallery__item{
@@ -1207,4 +1202,26 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.55);
+}
+
+/* ================= SITE FOOTER ================= */
+
+.site-footer{
+  width: min(720px, 92vw);
+  margin: 8px auto 28px;
+  padding: 18px 16px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 168, 106, 0.22);
+}
+.site-footer__text{
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.45);
+  font-weight: 500;
+}
+.site-footer__name{
+  color: #b4892d;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
