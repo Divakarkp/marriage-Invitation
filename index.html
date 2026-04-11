@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Wedding Invitation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Lets YouTube receive a proper Referer for embeds (avoids Error 153). See https://stackoverflow.com/questions/79802987 -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -44,15 +46,26 @@
           </div>
         </section>
 
-        <!-- HERO VIDEO BANNER -->
+        <!-- HERO VIDEO BANNER (YouTube — set HERO_YOUTUBE_VIDEO_ID in jss/main.js) -->
         <section class="page page--hero" aria-label="Hero video banner">
-          <video class="page__video" autoplay muted loop playsinline preload="metadata">
-            <source src="assets/hero.mp4" type="video/mp4">
-          </video>
+          <div class="page__videoStage">
+            <div class="page__ytWrap" id="heroYoutubeWrap">
+              <div class="page__ytInner">
+                <div id="heroYoutube" class="page__youtubeRoot" title="Wedding video"></div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="page__videoFs"
+              id="heroVideoFs"
+              aria-label="Open video fullscreen"
+            ></button>
+          </div>
           <div class="page__videoOverlay" aria-hidden="true"></div>
-          <div class="page__content page__content--bottom">
+          <div class="page__content page__content--bottom page__content--hero">
             <p class="page__kicker page__kicker--light">Together With Our Families, We Invite You</p>
             <h1 class="page__names page__names--light">Divakar KP <span class="amp amp--light">&amp;</span> Mamatha R</h1>
+            <p class="page__fsHint" aria-hidden="true">Tap for fullscreen · Unmute · Best quality: fullscreen or YouTube menu → Quality</p>
           </div>
         </section>
 
@@ -69,7 +82,9 @@
 
         <!-- TAB 2: COUPLE PHOTO -->
         <section class="page page--photo" aria-label="Couple photo">
-          <div class="page__photo" style="background-image:url('images/couple.png');" role="img" aria-label="Couple photo"></div>
+          <div class="page__photo" role="img" aria-label="Couple photo">
+            <img class="page__photoImg" src="images/couple.webp" alt="" width="1200" height="1600" loading="lazy" decoding="async" fetchpriority="low">
+          </div>
           <div class="page__overlay">
             <p class="page__kicker">TOGETHER WITH THEIR FAMILIES</p>
             <h2 class="page__names page__names--small">Divakar KP <span class="amp">&amp;</span> Mamatha R</h2>
@@ -133,23 +148,23 @@
       <h2 class="page__title">Our Moments</h2>
 
       <div class="gallery__grid" aria-label="Photo gallery">
-        <button class="gallery__item" type="button" data-full="images/gallery1.jpg" aria-label="Open photo 1">
-          <img src="images/gallery1.jpg" alt="Gallery photo 1" loading="lazy">
+        <button class="gallery__item" type="button" data-full="images/gallery1.webp" aria-label="Open photo 1">
+          <img src="images/gallery1.webp" alt="Gallery photo 1" width="640" height="640" loading="lazy" decoding="async" fetchpriority="low">
         </button>
-        <button class="gallery__item" type="button" data-full="images/gallery2.jpg" aria-label="Open photo 2">
-          <img src="images/gallery2.jpg" alt="Gallery photo 2" loading="lazy">
+        <button class="gallery__item" type="button" data-full="images/gallery2.webp" aria-label="Open photo 2">
+          <img src="images/gallery2.webp" alt="Gallery photo 2" width="640" height="640" loading="lazy" decoding="async" fetchpriority="low">
         </button>
-        <button class="gallery__item" type="button" data-full="images/gallery3.jpg" aria-label="Open photo 3">
-          <img src="images/gallery3.jpg" alt="Gallery photo 3" loading="lazy">
+        <button class="gallery__item" type="button" data-full="images/gallery3.webp" aria-label="Open photo 3">
+          <img src="images/gallery3.webp" alt="Gallery photo 3" width="640" height="640" loading="lazy" decoding="async" fetchpriority="low">
         </button>
-        <button class="gallery__item" type="button" data-full="images/gallery4.jpg" aria-label="Open photo 4">
-          <img src="images/gallery4.jpg" alt="Gallery photo 4" loading="lazy">
+        <button class="gallery__item" type="button" data-full="images/gallery4.webp" aria-label="Open photo 4">
+          <img src="images/gallery4.webp" alt="Gallery photo 4" width="640" height="640" loading="lazy" decoding="async" fetchpriority="low">
         </button>
-        <button class="gallery__item" type="button" data-full="images/gallery5.jpg" aria-label="Open photo 5">
-          <img src="images/gallery5.jpg" alt="Gallery photo 5" loading="lazy">
+        <button class="gallery__item" type="button" data-full="images/gallery5.webp" aria-label="Open photo 5">
+          <img src="images/gallery5.webp" alt="Gallery photo 5" width="640" height="640" loading="lazy" decoding="async" fetchpriority="low">
         </button>
-        <button class="gallery__item" type="button" data-full="images/gallery6.jpg" aria-label="Open photo 6">
-          <img src="images/gallery6.jpg" alt="Gallery photo 6" loading="lazy">
+        <button class="gallery__item" type="button" data-full="images/gallery6.webp" aria-label="Open photo 6">
+          <img src="images/gallery6.webp" alt="Gallery photo 6" width="640" height="640" loading="lazy" decoding="async" fetchpriority="low">
         </button>
       </div>
     </div>
@@ -198,6 +213,7 @@
       <p class="page__kicker">LOCATION</p>
       <h2 class="page__title">Beegara Oota</h2>
       <p class="page__muted">26 April • 12:00 PM Onwards</p>
+      <p class="page__muted">Srinivasa Samudhaya Bhavana</p>
 
       <div class="map-card" role="group" aria-label="Beegara Oota map and details">
         <div class="map-card__art" aria-hidden="true">
@@ -210,20 +226,21 @@
 
         <div class="map-card__frame">
           <iframe
-            title="Beegara Oota - Google Map"
+            title="Beegara Oota - Srinivasa Samudhaya Bhavana"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen
-            src="https://www.google.com/maps?q=https://maps.app.goo.gl/12kx2y1XqCY7z9yT9&output=embed">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1963.904637417069!2d76.94955924059673!3d12.860412704723354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafc7b5baaa3ca5%3A0x825ed18285c0f40a!2sSrinivasa%20samudhaya%20Bhavana!5e0!3m2!1sen!2sin!4v1775927031422!5m2!1sen!2sin">
           </iframe>
         </div>
 
         <div class="map-card__details">
           <div class="map-card__line"><span class="map-card__label">Event</span><span class="map-card__value">Beegara Oota</span></div>
-          <div class="map-card__line"><span class="map-card__label">Date & Time</span><span class="map-card__value">26 April • 12:00 PM Onwards</span></div>
+          <div class="map-card__line"><span class="map-card__label">Venue</span><span class="map-card__value">Srinivasa Samudhaya Bhavana</span></div>
+          <div class="map-card__line"><span class="map-card__label">Date &amp; Time</span><span class="map-card__value">26 April • 12:00 PM Onwards</span></div>
           <div class="map-card__actions">
-            <a class="map-btn" href="https://maps.app.goo.gl/12kx2y1XqCY7z9yT9" target="_blank" rel="noopener noreferrer">Open shared map</a>
-            <a class="map-btn map-btn--ghost" href="https://maps.app.goo.gl/12kx2y1XqCY7z9yT9" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Srinivasa%20Samudhaya%20Bhavana" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <a class="map-btn map-btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=12.8604127%2C76.9495592" target="_blank" rel="noopener noreferrer">Directions</a>
           </div>
         </div>
       </div>
@@ -237,7 +254,7 @@
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">×</button>
   <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
-  <img class="lightbox__img" id="lightboxImg" alt="">
+  <img class="lightbox__img" id="lightboxImg" alt="" decoding="async">
   <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Next photo">›</button>
 </div>
 

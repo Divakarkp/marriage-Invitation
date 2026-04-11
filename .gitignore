@@ -1,0 +1,5 @@
+# Large local file — hero plays from YouTube; keeps repo under GitHub’s ~100MB file limit
+assets/hero.mp4
+
+.DS_Store
+Thumbs.db
