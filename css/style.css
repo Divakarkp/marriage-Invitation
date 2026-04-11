@@ -13,8 +13,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background: 
-    linear-gradient(135deg, rgba(255,240,246,0.85) 0%, rgba(255,247,230,0.85) 45%, rgba(255,240,246,0.85) 100%),
-    url("../assets/invitation-bg.png");
+    linear-gradient(135deg, rgba(255,240,246,0.85) 0%, rgba(255,247,230,0.85) 45%, rgba(255,240,246,0.85) 100%);
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -27,8 +26,7 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(900px 500px at 35% 20%, rgba(255, 240, 246, 0.90), rgba(255, 247, 230, 0.88)),
-    url("../assets/invitation-bg.png");
+    radial-gradient(900px 500px at 35% 20%, rgba(255, 240, 246, 0.90), rgba(255, 247, 230, 0.88));
   background-size: cover;
   background-position: center;
   display: flex;
@@ -406,8 +404,7 @@ body {
 }
 .page--title{
   background:
-    radial-gradient(900px 520px at 40% 25%, rgba(255,255,255,0.75), rgba(255,240,246,0.50) 40%, rgba(255,247,230,0.50) 100%),
-    url("../assets/invitation-bg.png");
+    radial-gradient(900px 520px at 40% 25%, rgba(255,255,255,0.75), rgba(255,240,246,0.50) 40%, rgba(255,247,230,0.50) 100%);
   background-size: cover;
   background-position: center;
 }
@@ -497,8 +494,7 @@ body {
 
 .page--roses{
   background:
-    radial-gradient(800px 460px at 45% 30%, rgba(255,255,255,0.75), rgba(255,240,246,0.45) 45%, rgba(255,247,230,0.45) 100%),
-    url("../assets/invitation-bg.png");
+    radial-gradient(800px 460px at 45% 30%, rgba(255,255,255,0.75), rgba(255,240,246,0.45) 45%, rgba(255,247,230,0.45) 100%);
   background-size: cover;
   background-position: center;
 }
@@ -660,8 +656,7 @@ body {
 
 .page--details{
   background:
-    radial-gradient(900px 520px at 40% 25%, rgba(255,255,255,0.75), rgba(255,240,246,0.50) 40%, rgba(255,247,230,0.50) 100%),
-    url("../assets/invitation-bg.png");
+    radial-gradient(900px 520px at 40% 25%, rgba(255,255,255,0.75), rgba(255,240,246,0.50) 40%, rgba(255,247,230,0.50) 100%);
   background-size: cover;
   background-position: center;
 }
@@ -730,8 +725,7 @@ body {
 /* Countdown inside phone */
 .page--countdown{
   background:
-    linear-gradient(135deg, rgba(255,240,246,0.85) 0%, rgba(255,247,230,0.85) 55%, rgba(255,240,246,0.85) 100%),
-    url("../assets/invitation-bg.png");
+    linear-gradient(135deg, rgba(255,240,246,0.85) 0%, rgba(255,247,230,0.85) 55%, rgba(255,240,246,0.85) 100%);
   background-size: cover;
   background-position: center;
 }
@@ -748,8 +742,7 @@ body {
 
 .page--gallery{
   background:
-    linear-gradient(135deg, rgba(255,247,230,0.85) 0%, rgba(255,240,246,0.85) 55%, rgba(255,247,230,0.85) 100%),
-    url("../assets/invitation-bg.png");
+    linear-gradient(135deg, rgba(255,247,230,0.85) 0%, rgba(255,240,246,0.85) 55%, rgba(255,247,230,0.85) 100%);
   background-size: cover;
   background-position: center;
 }
@@ -856,8 +849,7 @@ body {
 
 .page--map{
   background:
-    radial-gradient(900px 520px at 40% 25%, rgba(255,255,255,0.75), rgba(255,240,246,0.50) 40%, rgba(255,247,230,0.50) 100%),
-    url("../assets/invitation-bg.png");
+    radial-gradient(900px 520px at 40% 25%, rgba(255,255,255,0.75), rgba(255,240,246,0.50) 40%, rgba(255,247,230,0.50) 100%);
   background-size: cover;
   background-position: center;
 }

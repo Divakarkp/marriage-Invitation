@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Lets YouTube receive a proper Referer for embeds (avoids Error 153). See https://stackoverflow.com/questions/79802987 -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>
+    (function () {
+      if (!/github\.io$/i.test(location.hostname)) return;
+      var path = location.pathname;
+      var key = "/marriage-Invitation";
+      var i = path.toLowerCase().indexOf(key);
+      if (i === -1) return;
+      var href = path.slice(0, i + key.length) + "/";
+      var b = document.createElement("base");
+      b.href = href;
+      var anchor = document.querySelector('link[rel="preconnect"]');
+      document.head.insertBefore(b, anchor || document.head.firstChild);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -199,8 +213,8 @@
           <div class="map-card__line"><span class="map-card__label">Venue</span><span class="map-card__value">BGS Samudhaya Bhavana</span></div>
           <div class="map-card__line"><span class="map-card__label">Type</span><span class="map-card__value">Convention Hall</span></div>
           <div class="map-card__actions">
-            <a class="map-btn" href="https://share.google/aLKXlYxe9l3WqMtfl" target="_blank" rel="noopener">Open shared map</a>
-            <a class="map-btn map-btn--ghost" href="https://www.google.com/maps/search/?api=1&query=BGS%20Samudhaya%20Bhavana" target="_blank" rel="noopener">Open in Google Maps</a>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=BGS%20Samudhaya%20Bhavana%20Bengaluru" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <a class="map-btn map-btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=BGS%20Samudhaya%20Bhavana%2C%20Bengaluru" target="_blank" rel="noopener noreferrer">Directions</a>
           </div>
         </div>
       </div>
